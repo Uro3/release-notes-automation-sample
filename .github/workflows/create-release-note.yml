@@ -5,6 +5,9 @@ on:
     branches:
       - production
 
+concurrency:
+  group: ${{ github.workflow }}
+
 jobs:
   create-release-note:
     runs-on: ubuntu-latest
